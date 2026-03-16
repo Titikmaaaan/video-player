@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Video Player</title>
+
+<style>
+
+/* Page background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#000,#111,#000);
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+/* Glass card */
+.video-card{
+    width:320px;
+    padding:20px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.7),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+
+    text-align:center;
+}
+
+/* Title */
+.video-card h2{
+    margin-bottom:15px;
+    font-weight:500;
+    letter-spacing:1px;
+    color:#e6e6e6;
+}
+
+/* Video wrapper vertical style */
+.video-wrapper{
+    border-radius:16px;
+    overflow:hidden;
+    background:black;
+}
+
+/* iframe styling */
+.video-wrapper iframe{
+    width:100%;
+    height:570px; /* vertical format */
+    border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="video-card">
+
+<h2>My Video</h2>
+
+<div class="video-wrapper">
+
+<iframe
+src="https://player.cloudinary.com/embed/?cloud_name=dxm9xmytw&public_id=LYRICAL_eee_mor5lc"
+allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</body>
+</html>
